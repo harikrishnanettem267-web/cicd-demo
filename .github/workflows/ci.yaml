@@ -15,7 +15,7 @@ jobs:
       - name: Call my composite action
         uses: ./.github/actions/greet
         with:
-          who: Hari
+          who: DevOps Team
       - name: Build step
         run: echo "Building the project"
 
