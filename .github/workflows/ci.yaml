@@ -22,3 +22,9 @@ jobs:
         run: echo "Hello $MY_NAME from $GITHUB_REPOSITORY on $RUNNER_OS"
       - name: Show event type
         run: echo "Triggered by $GITHUB_EVENT_NAME"
+      - name: Use the secret
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+        run: |
+          echo "Secret value is: $MY_SECRET"
+          echo "Secret length is: ${#MY_SECRET}"
