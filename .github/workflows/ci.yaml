@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Call my composite action
+        uses: ./.github/actions/greet
+        with:
+          who: Hari
       - name: Build step
         run: echo "Building the project"
 
@@ -21,5 +25,3 @@ jobs:
     steps:
       - name: Test step
         run: echo "Testing after build finished"
-      - name: Show event type
-        run: echo "Triggered by $GITHUB_EVENT_NAME"
