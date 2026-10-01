@@ -18,3 +18,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Show environment info
+        env:
+          MY_NAME: Hari
+        run: echo "Hello $MY_NAME from $GITHUB_REPOSITORY on $RUNNER_OS"
