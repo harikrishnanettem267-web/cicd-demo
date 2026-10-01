@@ -22,7 +22,3 @@ jobs:
         env:
           MY_NAME: Hari
         run: echo "Hello $MY_NAME from $GITHUB_REPOSITORY on $RUNNER_OS"
-      - name: This step will fail
-        run: exit 1
-      - name: This step should be skipped
-        run: echo "You will not see this"
